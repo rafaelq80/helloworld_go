@@ -57,4 +57,4 @@ COPY --from=build / /
 EXPOSE 8080
 
 
-ENTRYPOINT ["/"]
+ENTRYPOINT ["./"]
