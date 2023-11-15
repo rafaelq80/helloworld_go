@@ -22,6 +22,8 @@ WORKDIR /app
 
 COPY go.mod ./
 
+# Instalar as Bibliotecas Externas
+
 RUN go get github.com/gorilla/mux
 
 # download Go modules and dependencies
