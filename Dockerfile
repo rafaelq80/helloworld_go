@@ -36,7 +36,7 @@ COPY *.go ./
 
 # compile application
 
-RUN go build -o /
+RUN go build -o /helloworld_go
 
 
 ##
@@ -51,10 +51,10 @@ FROM scratch
 WORKDIR /
 
 
-COPY --from=build / /
+COPY --from=build /helloworld_go /helloworld_go
 
 
 EXPOSE 8080
 
 
-ENTRYPOINT ["./"]
+ENTRYPOINT ["/helloworld_go"]
